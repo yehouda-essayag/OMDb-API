@@ -20579,7 +20579,8 @@ var pageSize = 12;
     // pagination data 
     var currentPage = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(1);
     var totalPages = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
-      return Math.ceil(movies.value.length / pageSize);
+      console.log("totalPages", Math.ceil(movies.value.length / pageSize));
+      Math.ceil(movies.value.length / pageSize);
     });
     var paginatedMovies = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
       var start = (currentPage.value - 1) * pageSize;
@@ -21219,24 +21220,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
+  key: 0
+};
+var _hoisted_2 = {
   "class": "movie-list"
 };
-var _hoisted_2 = ["onClick"];
-var _hoisted_3 = ["src"];
-var _hoisted_4 = {
+var _hoisted_3 = ["onClick"];
+var _hoisted_4 = ["src"];
+var _hoisted_5 = {
   "class": "movie-info"
 };
-var _hoisted_5 = {
+var _hoisted_6 = {
   "class": "movie-title"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Pagination"], {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [$setup.totalPages > 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Pagination"], {
     currentPage: $setup.currentPage,
     totalPages: $setup.totalPages,
     "onUpdate:page": _cache[0] || (_cache[0] = function ($event) {
       return $setup.currentPage = $event;
     })
-  }, null, 8 /* PROPS */, ["currentPage", "totalPages"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.paginatedMovies, function (movie) {
+  }, null, 8 /* PROPS */, ["currentPage", "totalPages"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, "test", -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.paginatedMovies, function (movie) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: movie.id,
       "class": "movie-card",
@@ -21246,7 +21250,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
       src: movie.poster_url,
       "class": "movie-image"
-    }, null, 8 /* PROPS */, _hoisted_3), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(movie.title), 1 /* TEXT */)])], 8 /* PROPS */, _hoisted_2);
+    }, null, 8 /* PROPS */, _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(movie.title), 1 /* TEXT */)])], 8 /* PROPS */, _hoisted_3);
   }), 128 /* KEYED_FRAGMENT */))])]);
 }
 

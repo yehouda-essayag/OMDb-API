@@ -17,6 +17,7 @@ A Laravel-based API project for managing and fetching movie data from OMDb.
 ```bash
 git clone https://github.com/yehouda-essayag/OMDb-API.git
 cd OMDb-API
+New-Item -ItemType File -Path ".\database\database.sqlite"
 composer install
 cp .env.example .env
 php artisan key:generate
@@ -47,6 +48,11 @@ php artisan key:generate
 ```bash
 php artisan migrate
 ```
+if not migrate run 
+```bash
+php artisan migrate:fresh
+```
+
 
 5. **Run migrations:**
 ```bash
